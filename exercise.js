@@ -1,9 +1,9 @@
 /*
-Problem Set 1 PacMan  - Bounce off Walls 
-1)	Bounce off Walls -  Given the code below and the 4 images  
-PacMan1.png etc make the PacMan bounce off the boundary at x=600px 
+Problem Set 1 PacMan  - Bounce off Walls
+1)	Bounce off Walls -  Given the code below and the 4 images
+PacMan1.png etc make the PacMan bounce off the boundary at x=600px
 so that it reverses its direction of motion and uses the last 2 images.
-Then make it bounce off the boundary at x = 0px.  
+Then make it bounce off the boundary at x = 0px.
 You will need to take into account the size of the image.
 
 */
@@ -17,8 +17,8 @@ exercise.run = function() {
     exercise.chooseImage();
 };
 exercise.updatePosition = function() {
-    // increment exercise.pos.x by increment 
-    // now set image position using img1.style.left 
+    // increment exercise.pos.x by increment
+    // now set image position using img1.style.left
     // remember images positions are "xxx.px"
 
 
