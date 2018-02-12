@@ -1,7 +1,45 @@
 <html>
+<head>
+    <style>
+    body {
+        /* Positioning */
+        position: relative;
+        margin: auto;
+        width: 600px;
+
+        /* Color*/
+        background: black;
+    }
+
+    body div {
+        /* Border */
+        border-color: darkblue;
+        border-radius: 25px;
+        border-style:double;
+        border-width:5px;
+
+        /* Size */
+        min-height: 200px;
+        width: 100%;
+        padding: 50px;
+
+        /* Positioning */
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    img#PacMan {
+        position: relative;
+    }
+    </style>
+</head>
 
 <body>
-    <img id="PacMan" src="PacMan1.png" style="position:absolute" width='200'>
+    <div>
+    <img id="PacMan" src="PacMan1.png" width='200'>
+    </div>
     <script src="exercise.js"></script>
     <script type="text/javascript">
         window.onload = function() {
