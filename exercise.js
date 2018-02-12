@@ -18,30 +18,35 @@ exercise.run = function() {
 };
 exercise.updatePosition = function() {
     // increment exercise.pos.x by increment
+    exercise.pos.x += exercise.increment;
     // now set image position using img1.style.left
     // remember images positions are "xxx.px"
-
-
+    exercise.img1.style.left = exercise.pos.x + "px";
 };
-exercise.chooseImage = function() {
+exercise.selectImage = function(){
+    exercise.flag = !exercise.flag;
     // choose between all 4 images
     if (exercise.increment > 0) {
-        if (exercise.flag === 1) {
-
+        if (exercise.flag == 1) {
+            return "PacMan2.png"; // forward mouth shut
         } else {
-
+            return "PacMan1.png"; // forward mouth open
         }
     } else if (exercise.increment < 0) {
-        if (exercise.flag === 1) {
-
+        if (exercise.flag == 1) {
+            return "PacMan4.png"; // reverse mouth shut
         } else {
-
+            return "PacMan3.png"; // reverse mouth open
         }
     }
+}
+exercise.chooseImage = function() {
+    exercise.img1.src = exercise.selectImage();
 };
 exercise.checkWallCollision = function() {
     // reset the direction of motion if wall is hit
     // you need to take into account image width
-
-
+    if (exercise.pos.x > (600 - exercise.img1.width - Math.abs(exercise.increment)) || exercise.pos.x < (0 + Math.abs(exercise.increment))){
+        exercise.increment = -exercise.increment;
+    }
 };
